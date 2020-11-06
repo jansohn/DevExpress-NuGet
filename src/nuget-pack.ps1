@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
 Clear
 
@@ -12,6 +12,6 @@ Foreach-Object{
     if ($LASTEXITCODE -ne 0)
     {
         Write-Error "Error generating nupkg for '$($_.Name)'"
-        break
+        #break
     }
 }
